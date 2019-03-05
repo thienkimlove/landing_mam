@@ -1,0 +1,132 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 25, 2018, 9:48:39 PM
+    Author     : nham.tv8693
+*/
+@font-face{
+    font-family: "HelveLight";
+    src: url("../webfonts/SFUHelveticaLight.TTF");
+}
+@font-face{
+    font-family: "HelveLightBold";
+    src: url("../webfonts/SFUHelveticaBold.TTF");
+}
+.all-page{max-width: 1425px;margin: auto;}
+ul{list-style: none;padding: 0}
+.box-banner{width:100%;height:808px;float:left;background:url('../images/landingpage-mam-hoa-xuan/banner.jpg') no-repeat;background-size: 100% auto;}
+.box-banner .container{height: 100%;position: relative;}
+.box-banner .bg-mobile{display: none}
+.box-banner .content{width: auto;float: left;position: absolute;right: 0;bottom: 50px;}
+.box-banner .content p{font-family: "HelveLight";margin-bottom: 5px;font-size: 20px;color: #949494;}
+.box-banner .content .buy{width: 100%;height: auto;float: left;text-align: center;margin-top: 50px;}
+.box-banner .content .buy span{font-family: "HelveLight";color: #9fa100;font-weight: bold;font-size: 21px;}
+.readmore{width: 100%;height: auto;float:left;text-align: center;margin-bottom: 15px;padding: 15px 0px;}
+.readmore a{background: url('../images/readmore.png') no-repeat;height: 48px;width: 105px;display: block;margin: auto;background-size: cover !important;}
+.box-2{width: 100%;height:auto;float:left;background:url('../images/landingpage-mam-hoa-xuan/bg-box-2.jpg') no-repeat;position: relative;top: -1px;background-size: 100% auto;padding: 50px 0;}
+.box-2 .container{max-width: 980px;}
+.box-2 h2{font-family: "HelveLight";text-align: center;text-transform: uppercase;color: #c2922d;font-weight: bold;font-size: 35px;margin-bottom: 15px;}
+.box-2 h3{font-family: "HelveLight";text-align: center;color: #69833a;text-transform: uppercase;font-size: 23px;}
+.box-2 .list-item{font-family: "HelveLight";width: 100%;height: auto;float: left;margin: 50px 0px;text-align: center;}
+.box-2 .list-item .thumb{width: 100%;height: auto;float: left;}
+.box-2 .list-item .thumb img{width: 190px;height: 190px;object-fit: cover;border-radius: 50%;border: solid 3px #c2922d;}
+.box-2 .list-item span{color: #d1ac60;font-weight: bold;font-size: 21px;padding: 10px;width: 100%;float: left;}
+.box-2 .list-item p{color: #583e19;}
+.box-3{width: 100%;height:895px;float:left;background:url('../images/landingpage-mam-hoa-xuan/bg-box-3.jpg') no-repeat;background-size: 100% auto;position: relative;top: -1px;padding: 30px 0;}
+.box-3 .container{}
+.box-3 h2{font-family: "HelveLight";text-align: center;text-transform: uppercase;color: #c2922d;}
+.box-3 h3{font-family: "HelveLight";text-align: center;text-transform: uppercase;color: #69833a;margin-bottom: 10px;}
+.box-3 .content{width: 50%;height: auto;float: right;padding-top: 50px;}
+.box-3 .content ul{}
+.box-3 .content ul li{font-family: "HelveLight";width: 100%;height: auto;float: left;color: #583e19;font-size: 20px;padding-bottom: 22px;position: relative;}
+.box-3 .content ul li:before{content:'';width: 70px;height: 3px;background: #c2922d;position: absolute;left: 0;bottom: 15px;}
+.box-4{width: 100%;height:935px;float:left;background:url('../images/landingpage-mam-hoa-xuan/bg-box-4.jpg') no-repeat;background-size: 100% auto;padding-top: 80px;}
+.box-4 .container{text-align: center;max-width: 670px;}
+.box-4 h2{font-family: "HelveLight";color: #c2922d;text-transform: uppercase;margin-bottom: 15px;}
+.box-4 h3{font-family: "HelveLight";color: #69833a;margin-bottom: 50px;}
+.box-4 p{font-family: "HelveLight";color: #583e19;font-size: 17px;}
+.box-5{width: 100%;height: auto;float: left;font-family: "HelveLight";color: #583e19;}
+.box-5 .container{max-width: 980px;}
+.box-5 .info{width: 100%;height: auto;float: left;padding: 0 150px 50px 150px;}
+.box-5 .info h2{color: #c2922d;text-transform: uppercase;text-align: center;margin-bottom: 15px;}
+.box-5 .info h3{color: #69833a;margin-bottom: 15px;}
+.box-5 .info p{font-size: 18px;}
+.box-5 .list-item{width: 100%;height: auto;float: left;padding: 0 70px;}
+.box-5 .list-item ul{}
+.box-5 .list-item ul li{width: 100%;height: auto;float: left;padding-bottom: 15px;font-size: 18px;}
+.box-5 .list-item ul li:before{content:'■';position: relative;top: -3px;padding-right: 10px;color: #c2922d;}
+.box-5 .thumb{width: 100%;height: auto;float: left;}
+.box-5 .thumb img{width: 800px;margin: auto;display: block;}
+.box-5 .guide{width: 100%;height: auto;float: left;padding: 30px 0;text-align: center;}
+.box-5 .guide h3{color: #c47300;text-transform: uppercase;margin-bottom: 40px;}
+.box-5 .guide .item{width: 100%;height: auto;float: left;font-size: 18px;margin-bottom: 10px;}
+.box-5 .guide .item span{color: #69833a;}
+.box-5 .guide .item p{}
+.box-6{width:100%;height:auto;float:left;background:url('../images/landingpage-mam-hoa-xuan/bg-box-6.jpg') no-repeat;font-family: "HelveLight";padding: 50px;background-size: 100% auto;}
+.box-6 .container{}
+.box-6 h2{color: #FFF;text-transform: uppercase;text-align: center;font-size: 35px;}
+.box-6 h3{color: #feffb6;text-align: center;font-size: 23px;}
+.box-6 .content{width: auto;height: auto;margin: auto;display: table;padding-top: 20px;}
+.box-6 .content img{height: 350px;margin: 10px;}
+.box-7{width: 100%;height:auto;float:left;font-family: "HelveLight";padding: 50px 0;}
+.box-7 .container{max-width: 980px;}
+.box-7 .box-header{width: 100%;height: auto;float: left;text-align: center;margin-bottom: 20px;}
+.box-7 .box-header h2{color: #c2922d;text-transform: uppercase;}
+.box-7 .box-header p{color: #69833a;}
+.box-7 .content{width: 100%;height: auto;float: left;text-align: center;}
+.box-7 .content h3{color: #69833a;text-transform: uppercase;font-size: 21px;font-family: tahoma;}
+.box-7 .content span{display: block;color: #c2922d;font-size: 18px;padding-bottom: 5px;font-family: tahoma;}
+.box-7 .content p{text-align: justify;color: #583e19;}
+.box-7 .content img{}
+.box-8{width: 100%;height:auto;float:left;text-align: center;font-family: "HelveLight";padding: 50px 0;}
+.box-8 .container{max-width: 980px;}
+.box-8 h2{color: #c2922d;text-transform: uppercase;font-size: 28px;margin-bottom: 60px;}
+.box-8 img{padding-bottom: 10px;}
+.box-8 p{color: #c2922d;}
+footer{width: 100%;height:auto;float:left;background:url('../images/landingpage-mam-hoa-xuan/bg-footer.jpg') no-repeat;background-size: 100% auto;padding: 20px 0 125px 0;}
+footer .container{max-width: 800px;}
+footer p{width: 100%;height: auto;float: left;margin-bottom: 30px;}
+footer p img{margin: auto;display: block;}
+footer .frm-submit{width: 74%;height: auto;float: right;}
+footer .frm-submit .frm-group{width: calc(100% - 200px);height: auto;float: left;margin-bottom: 30px;}
+footer .frm-submit .frm-group input{width: 100%;border: 0;border-radius: 5px;padding-left: 10px;margin-bottom: 10px;height: 40px;}
+footer .frm-submit .frm-button{width: 200px;height: auto;float: left;text-align: center;}
+footer .frm-submit .frm-button p{color: #9fa100;font-size: 16px;}
+footer .frm-submit .frm-button button{background: none;border: 0;}
+footer .frm-submit .frm-button button img{height: 55px;}
+.thumb-mobile{display: none;}
+@media(max-width:768px){
+    .box-banner{height:auto;}
+    .box-banner .content{position: relative;width: 100%;height: auto;float: left;bottom: 0;background: #ebf0f6;text-align: center;}
+    .box-2{background-size: cover;padding: 10px 0;}
+    .box-banner{background:none}
+    .box-banner .container{max-width: 100%;padding: 0}
+    .box-banner .bg-mobile{display: block}
+    .box-banner .bg-mobile img{width: 100%;height:auto}
+    .box-banner .content .buy{margin-top: 0;}
+    .box-3{height: auto;}
+    .box-3 .container{padding: 0}
+    .thumb-mobile{display: block;opacity: 0;}
+    .thumb-mobile img{width: 100%;}
+    .box-3 .content{width: 100%;padding: 0 10px;}
+    .box-3 .content ul li{font-size: 15px}
+    .box-4{height:auto;padding: 0;}
+    .box-4 .container{padding: 0;position: relative;}
+    .box-4 h2{position: absolute;top: 0;font-size: 23px;width: 100%;padding-top: 15px;}
+    .box-4 h3{position: absolute;top: 0;font-size: 20px;width: 100%;padding-top: 46px;}
+    .box-4 p{padding: 0 10px}
+    .box-5 .info{padding: 0}
+    .box-5 .list-item{padding: 0}
+    .box-5 .thumb img{width: 100%;}
+    .box-5 .guide .item{margin-bottom: 5px;}
+    .box-6{background-size: cover}
+    .box-6 .content img{width: 100%;display: block;height: auto}
+    footer{background-position: center bottom;}
+    footer p img{max-width: 100% !important;}
+    footer .frm-submit{width: 100%;}
+    footer .frm-submit .frm-group{width: calc(100% - 150px);}
+    footer .frm-submit .frm-button{width: 150px}
+}

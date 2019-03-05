@@ -37,7 +37,7 @@ class ContactCrudController extends CrudController
         //$this->crud->setFromDb();
 
 
-        $this->crud->addColumns(
+        $this->crud->addColumns([
             [
                 'name' => 'name',
                 'label' => 'Name',
@@ -51,10 +51,14 @@ class ContactCrudController extends CrudController
                 'label' => 'Address',
             ],
             [
+                'name' => 'content',
+                'label' => 'Content',
+            ],
+            [
                 'name' => 'status',
                 'label' => 'Status',
             ]
-        );
+        ]);
 
         //FIELDS
 
@@ -70,6 +74,11 @@ class ContactCrudController extends CrudController
             [
                 'name' => 'address',
                 'label' => 'Address',
+                'type' => 'textarea'
+            ],
+            [
+                'name' => 'content',
+                'label' => 'Content',
                 'type' => 'textarea'
             ],
             [

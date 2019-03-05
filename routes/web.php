@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'FrontendController@index')->name('frontend.index');
+Route::get('mam-hoa-xuan.html', 'FrontendController@landing1')->name('frontend.landing1');
+Route::get('sam-to-nu.html', 'FrontendController@landing2')->name('frontend.landing2');
+Route::get('white-plus.html', 'FrontendController@landing3')->name('frontend.landing3');
 Route::post('saveContact', 'FrontendController@saveContact')->name('frontend.saveContact');
 Route::get('tu-khoa/{value}', 'FrontendController@tag')->name('frontend.tag');
 

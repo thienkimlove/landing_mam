@@ -36,7 +36,7 @@ class CategoryCrudController extends CrudController
         // TODO: remove setFromDb() and manually define Fields and Columns
         //$this->crud->setFromDb();
         // ------ CRUD COLUMNS
-        $this->crud->addColumns(
+        $this->crud->addColumns([
             [
                 'name' => 'name',
                 'label' => 'Name',
@@ -54,7 +54,7 @@ class CategoryCrudController extends CrudController
                 'label' => 'Status',
                 'type' => 'boolean',
             ]
-        );
+        ]);
 
         // ------ CRUD FIELDS
         $this->crud->addFields([

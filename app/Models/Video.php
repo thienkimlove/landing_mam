@@ -88,6 +88,21 @@ class Video extends Model
 
         return $youtubeVideoId;
     }
+
+    public function getCodeByValues($w='auto', $h = 'auto')
+    {
+        $dom = new \DOMDocument;
+        $dom->loadHTML($this->code);
+        $iframes = $dom->getElementsByTagName('iframe');
+        if (isset($iframes[0])) {
+            $iframes[0]->setAttribute('height', $h);
+            $iframes[0]->setAttribute('width', $w);
+            //$iframes[0]->setAttribute('scrolling', 'no');
+            return $dom->saveHTML($iframes[0]);
+        } else {
+            return '';
+        }
+    }
     /*
     |--------------------------------------------------------------------------
     | MUTATORS

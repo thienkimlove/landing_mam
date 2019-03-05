@@ -24,6 +24,7 @@ class Contact extends Model
         'phone',
         'address',
         'status',
+        'content'
     ];
     // protected $hidden = [];
     // protected $dates = [];

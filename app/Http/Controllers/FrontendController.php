@@ -18,57 +18,71 @@ class FrontendController extends Controller
         $page = 'index';
 
         $meta = [
-            'meta_title' => 'Viettiepuocmo',
-            'meta_desc' => 'Viettiepuocmo',
-            'meta_keywords' => 'Viettiepuocmo',
+            'meta_title' => 'Mầm hoa xuân',
+            'meta_desc' => 'Mầm hoa xuân',
+            'meta_keywords' => 'Mầm hoa xuân',
             'meta_image' => url('frontend/images/logo.png'),
             'meta_url' => url('/'),
         ];
 
-        $topPosts = Post::where('status', true)
+        $homePosts = Post::where('status', true)
             ->where('is_home', true)
             ->latest('updated_at')
-            ->limit(5)
             ->get();
 
-        $blogPosts = Post::where('status', true)
+        $homeVideos = Video::where('status', true)
             ->where('is_home', true)
-            ->where('is_blog', true)
             ->latest('updated_at')
-            ->limit(5)
             ->get();
-
-        $stolenCate = null;
-        $writeDreamCate = null;
-        $togetherCate = null;
-        $donationCate = null;
-        $cateList = Category::where('status', true)->whereNull('parent_id')->get();
-
-        foreach ($cateList as $mainCate) {
-            if (strpos($mainCate->slug, 'danh-cap') !==False) {
-                $stolenCate = $mainCate;
-            }
-            if (strpos($mainCate->slug, 'viet-tiep') !==False) {
-                $writeDreamCate = $mainCate;
-            }
-            if (strpos($mainCate->slug, 'dong-hanh') !==False) {
-                $togetherCate = $mainCate;
-            }
-            if (strpos($mainCate->slug, 'quy-vi-benh-nhan') !==False) {
-                $donationCate = $mainCate;
-            }
-        }
 
 
         return view('frontend.index', compact(
             'page',
-            'topPosts',
-            'togetherCate',
-            'donationCate',
-            'writeDreamCate',
-            'blogPosts',
-            'stolenCate'
+            'homePosts',
+            'homeVideos'
         ))->with($meta);
+    }
+
+    public function landing1()
+    {
+        $page = 'landing1';
+        $meta = [
+            'meta_title' => 'Mầm hoa xuân',
+            'meta_desc' => 'Mầm hoa xuân',
+            'meta_keywords' => 'Mầm hoa xuân',
+            'meta_image' => url('frontend/images/logo.png'),
+            'meta_url' => url('/'),
+        ];
+
+        return view('frontend.landing1', compact('page'))->with($meta);
+    }
+
+    public function landing2()
+    {
+        $page = 'landing2';
+        $meta = [
+            'meta_title' => 'Sâm tố nữ',
+            'meta_desc' => 'Sâm tố nữ',
+            'meta_keywords' => 'Sâm tố nữ',
+            'meta_image' => url('frontend/images/logo.png'),
+            'meta_url' => url('/'),
+        ];
+
+        return view('frontend.landing2', compact('page'))->with($meta);
+    }
+
+    public function landing3()
+    {
+        $page = 'landing3';
+        $meta = [
+            'meta_title' => 'Trắng da White-Plus',
+            'meta_desc' => 'Trắng da White-Plus',
+            'meta_keywords' => 'Trắng da White-Plus',
+            'meta_image' => url('frontend/images/logo.png'),
+            'meta_url' => url('/'),
+        ];
+
+        return view('frontend.landing3', compact('page'))->with($meta);
     }
 
 
@@ -76,9 +90,9 @@ class FrontendController extends Controller
     {
         $page = 'lien-he';
         $meta = [
-            'meta_title' => 'Viettiepuocmo',
-            'meta_desc' => 'Viettiepuocmo',
-            'meta_keywords' => 'Viettiepuocmo',
+            'meta_title' => 'Mầm hoa xuân',
+            'meta_desc' => 'Mầm hoa xuân',
+            'meta_keywords' => 'Mầm hoa xuân',
             'meta_image' => url('frontend/images/logo.png'),
             'meta_url' => route('frontend.policy'),
         ];
@@ -91,37 +105,14 @@ class FrontendController extends Controller
         $page = 'lien-he';
         $meta = [];
 
-        $meta['meta_title'] = 'Lien he';
-        $meta['meta_desc'] = 'Lien he';
-        $meta['meta_keywords'] = 'Lien he';
+        $meta['meta_title'] = 'Liên hệ chúng tôi';
+        $meta['meta_desc'] = 'Liên hệ chúng tôi';
+        $meta['meta_keywords'] = 'Liên hệ chúng tôi';
         $meta['meta_image'] = url('frontend/images/logo.png');
         $meta['meta_url'] =route('frontend.contact');
 
 
         return view('frontend.contact', compact('page'))->with($meta);
-    }
-
-    public function search(Request $request)
-    {
-        $page = 'search';
-        if ($request->filled('q')) {
-
-
-            $keyword = $request->get('q');
-            $posts = Post::publish()->where('name', 'LIKE', '%' . $keyword . '%')->paginate(10);
-
-            $meta = [];
-            $meta['meta_title'] = 'Tìm kiếm cho từ khóa ' . $keyword;
-            $meta['meta_desc'] = 'Tìm kiếm cho từ khóa ' . $keyword;
-            $meta['meta_keywords'] = $keyword;
-            $meta['meta_image'] = url('frontend/images/logo.png');
-            $meta['meta_url'] = route('frontend.search');
-
-
-            return view('frontend.search', compact('posts', 'keyword', 'page'))->with($meta);
-        } else {
-            return redirect('/');
-        }
     }
 
     public function tag($value)
@@ -133,9 +124,8 @@ class FrontendController extends Controller
         $tag = Tag::findBySlug($value);
 
         if ($tag) {
-            $meta_title = ($tag->seo_name) ? $tag->seo_name : $tag->name;
+            $meta_title = $tag->name;
             $meta_desc = $tag->desc;
-            $meta_keywords = $tag->keywords;
 
             $posts = Post::publish()
                 ->whereHas('tags', function ($q) use ($tag) {
@@ -146,7 +136,7 @@ class FrontendController extends Controller
 
             $meta['meta_title'] = $meta_title;
             $meta['meta_desc'] = $meta_desc;
-            $meta['meta_keywords'] = $meta_keywords;
+            $meta['meta_keywords'] = '';
             $meta['meta_image'] = url('frontend/images/logo.png');
             $meta['meta_url'] = route('frontend.tag', $value);
 
@@ -159,28 +149,21 @@ class FrontendController extends Controller
     public function main($value)
     {
         if (preg_match('/([a-z0-9\-]+)\.html/', $value, $matches)) {
-            $post = Post::findBySlug($matches[1]);
-            if ($post) {
-                $post->update(['views' => (int) $post->views + 1]);
-                $latestNews = Post::publish()
-                    ->where('category_id', $post->category_id)
-                    ->where('id', '!=', $post->id)
-                    ->latest('updated_at')
-                    ->limit(6)
-                    ->get();
+            $mainPost = Post::findBySlug($matches[1]);
+            if ($mainPost) {
 
-                $page = $post->category->slug;
-
+                $page = 'posts';
                 $meta = [];
 
+                $meta['meta_title'] = $mainPost->name;
+                $meta['meta_desc'] = $mainPost->desc;
+                $meta['meta_keywords'] = ($mainPost->tagList) ? implode(',', $mainPost->tagList) : null;
+                $meta['meta_image'] = url($mainPost->image);
+                $meta['meta_url'] = route('frontend.main', $mainPost->slug.'.html');
 
-                $meta['meta_title'] = ($post->seo_name) ? $post->seo_name : $post->name;
-                $meta['meta_desc'] = $post->desc;
-                $meta['meta_keywords'] = ($post->tagList) ? implode(',', $post->tagList) : null;
-                $meta['meta_image'] = url($post->image);
-                $meta['meta_url'] = route('frontend.main', $post->slug.'.html');
+                $hotNews = Post::where('status', true)->where('id', '!=', $mainPost->id)->latest('updated_at', 'desc')->limit(10)->get();
 
-                return view('frontend.post', compact('post', 'latestNews', 'page'))->with($meta);
+                return view('frontend.post', compact('mainPost', 'page', 'hotNews'))->with($meta);
             } else {
                 return redirect('/');
             }
@@ -188,7 +171,7 @@ class FrontendController extends Controller
             $category = Category::findBySlug($value);
 
             if ($category) {
-                $category->update(['views' => (int) $category->views + 1]);
+
                 if ($category->children->count() == 0) {
 
                     if (Post::publish()->where('category_id', $category->id)->count() == 1) {
@@ -200,20 +183,20 @@ class FrontendController extends Controller
                     $posts = Post::publish()
                         ->where('category_id', $category->id)
                         ->latest('updated_at')
-                        ->paginate(9);
+                        ->paginate(6);
                 } else {
                     //parent categories
                     $posts = Post::publish()
                         ->whereIn('category_id', $category->children->pluck('id')->all())
                         ->latest('updated_at')
-                        ->paginate(9);
+                        ->paginate(6);
 
                 }
                 $page = $category->slug;
                 $meta = [];
-                $meta['meta_title'] = ($category->seo_name) ?  $category->seo_name : $category->name;
+                $meta['meta_title'] = $category->name;
                 $meta['meta_desc'] = ($category->desc)? $category->desc : null;
-                $meta['meta_keywords'] = ($category->keywords)? $category->keywords : null;
+                $meta['meta_keywords'] = '';
                 $meta['meta_image'] = url('frontend/images/logo.png');
                 $meta['meta_url'] = route('frontend.main', $category->slug);
 
@@ -239,7 +222,7 @@ class FrontendController extends Controller
         $meta['meta_url'] =route('frontend.video');
 
         $mainVideo = null;
-        $videos = Video::latest('updated_at')->paginate(12);
+        $videos = Video::latest('updated_at')->paginate(5);
         $latestVideos = null;
 
         if ($value) {
@@ -277,14 +260,13 @@ class FrontendController extends Controller
             unset($data['redirect_url']);
         }
 
-        if (!empty($data['name']) && !empty($data['email']) && !empty($data['content']) && !empty($data['phone'])) {
+        if (!empty($data['name']) && !empty($data['address']) && !empty($data['phone'])) {
 
             Contact::create([
                 'name' => isset($data['name'])? $data['name'] : "N/A",
-                'email' => $data['email'],
                 'phone' => $data['phone'],
-                'title' => isset($data['title'])? $data['title'] : 'N/A',
-                'content' => $data['content'],
+                'address' => $data['address'],
+                'content' => isset($data['content']) ? $data['content'] : 'N/A',
                 'status' => 'RECEIVE'
             ]);
         } else {

@@ -36,7 +36,7 @@ class VideoCrudController extends CrudController
 
         // TODO: remove setFromDb() and manually define Fields and Columns
         //$this->crud->setFromDb();
-        $this->crud->addColumns(
+        $this->crud->addColumns([
             [
                 'name' => 'name',
                 'label' => 'Title',
@@ -46,8 +46,14 @@ class VideoCrudController extends CrudController
                 'label' => 'Status',
                 'type' => 'select_from_array',
                 'options' => [1 => 'Active', 0 => 'Inactive']
-            ]
-        );
+            ],
+            [
+                'name' => 'is_home',
+                'label' => 'IsHome',
+                'type' => 'select_from_array',
+                'options' => [1 => 'Yes', 0 => 'No']
+            ],
+        ]);
 
 
 
@@ -74,6 +80,14 @@ class VideoCrudController extends CrudController
                 'label' => 'Status',
                 'type' => 'select2_from_array',
                 'options' => [1 => 'Active', 0 => 'Inactive'],
+                'allows_null' => false,
+                'default' => 1,
+            ],
+            [
+                'name' => 'is_home',
+                'label' => 'IsHome',
+                'type' => 'select2_from_array',
+                'options' => [1 => 'Yes', 0 => 'No'],
                 'allows_null' => false,
                 'default' => 1,
             ]

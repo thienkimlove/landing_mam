@@ -42,10 +42,15 @@ class PostCrudController extends CrudController
 
         $this->crud->orderBy('updated_at', 'desc');
 
-        $this->crud->addColumns(
+        $this->crud->addColumns([
             [
                 'name' => 'name',
                 'label' => 'Title',
+            ],
+            [
+                'name' => 'image',
+                'label' => 'Image',
+                'type' => 'image',
             ],
             [
                 'label' => 'Category',
@@ -73,7 +78,7 @@ class PostCrudController extends CrudController
                 'type' => 'select_from_array',
                 'options' => [1 => 'Active', 0 => 'Inactive']
             ]
-        );
+        ]);
 
 
 

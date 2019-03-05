@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 24, 2018, 11:31:56 PM
+    Author     : nham.tv8693
+*/
+@font-face{
+    font-family: "HelveLight";
+    src: url("../webfonts/SFUHelveticaLight.TTF");
+}
+.all-page{max-width: 1425px;margin: auto;}
+.banner{width: 100%;height:auto;float:left;}
+.banner img{width: 100%;height:auto;}
+.box-ldg-1{}
+.box-ldg-1 .container-fluid{max-width: 1280px;}
+.box-ldg-1 .content{font-family: "HelveLight";width: 100%;height: auto;float: left;background: url('../images/landingpage-while-plus/images-x1.png') no-repeat;background-size: 50%;text-align: right;padding: 140px 0;background-position: left bottom;}
+.box-ldg-1 .content h2{font-family: "HelveLight";width: 100%;height: auto;float: left;color: #b4353a;font-size: 30px;}
+.box-ldg-1 .content h3{font-family: "HelveLight";width: 100%;height: auto;float: left;text-transform: uppercase;color: #c2922d;font-size: 35px;padding-right: 50px;}
+.box-ldg-1 .content .list-item{width: auto;float: right;text-align: left;position: relative;margin: 50px 20px;padding: 20px;}
+.box-ldg-1 .content .list-item:before{content:'';width: 120%;height: 120%;position: absolute;border: solid 3px #583e19;top: -10%;left: -10%;}
+.box-ldg-1 .content .list-item:after{content: '';width: 120%;height: 120%;position: absolute;border: solid 1px #583e19;top: 0;left: -20%;}
+.box-ldg-1 .content .list-item ul{list-style: none;padding: 0;margin: 0;}
+.box-ldg-1 .content .list-item ul li{background: url('../images/landingpage-while-plus/bg-list-item.png') no-repeat;font-family: "HelveLight";padding-left: 20px;background-position: left center;color: #583e19;font-size: 20px;}
+.box-ldg-2{background: url('../images/landingpage-while-plus/bg-box3.jpg') no-repeat;width: 100%;height: auto;float: left;background-size: 100% auto;padding: 130px 0;position: relative;top: -3px;}
+.box-ldg-2 .container{max-width: 980px}
+.box-ldg-2 p{}
+.box-ldg-2 p img{width: 300px;height: auto;margin: auto;display: block;padding-bottom: 20px;}
+.box-ldg-2 h2{color: #c2922d;font-family: "HelveLight";text-align: center;text-transform: uppercase;font-size: 30px;margin-bottom: 15px;font-weight: bold;}
+.box-ldg-2 h3{color: #b4353a;font-family: "HelveLight";text-align: center;font-size: 35px;}
+.box-ldg-2 ul.list-item{list-style: none;margin: 0;padding: 0;width: 65%;height: auto;float: left;margin-top: 15px;}
+.box-ldg-2 ul.list-item li{font-family: "HelveLight";color: #583e19;width: 100%;height: auto;float: left;border-bottom: #c2922d 1px dotted;padding: 10px 0;font-size: 18px;}
+.box-ldg-3{width: 100%;height: auto;float: left;position: relative;background: #f0f1f5;padding: 30px 0;}
+.box-ldg-3:before{content:'';background:url('../images/landingpage-while-plus/bg-box-4-left.png') no-repeat;width: 330px;height: 665px;position: absolute;top: -55px;left: 0;}
+.box-ldg-3:after{content:'';background:url('../images/landingpage-while-plus/bg-box-4-right.png') no-repeat;width: 535px;height: 665px;position: absolute;bottom: 0;right: 0;}
+.box-ldg-3 .container{max-width: 980px;}
+.box-ldg-3 p{margin: 0;}
+.box-ldg-3 p img{height: 450px;width: auto;margin: auto;display: block;position: relative;z-index: 2;}
+.box-ldg-3 .price{width: 100%;height: auto;float: left;text-align: center;color: #5d8060;font-size: 25px;}
+.box-ldg-3 .list-feedback{width: 100%;height: auto;float: left;position: relative;z-index: 1;}
+.box-ldg-3 .list-feedback img{border: solid 3px #c2922d;}
+.readmore{width: 100%;height: auto;float:left;text-align: center;margin-bottom: 15px;padding: 15px 0px;}
+.readmore a{background: url('../images/icon-readmore.png') no-repeat;height: 42px;width: 92px;display: block;margin: auto;background-size: cover !important;}
+.box-ldg-4{width: 100%;height:874px;float:left;background:#dfcd8f url('../images/landingpage-while-plus/bg-box-5.jpg') no-repeat;background-size: 100%;}
+.box-ldg-4 .container{width: 980px;height: 100%;position: relative;}
+.box-ldg-4 .content{width: auto;float: left;height: auto;position: absolute;right: 0;bottom: 0;}
+.box-ldg-4 .content h2{font-family: "HelveLight";text-transform: uppercase;font-size: 30px;margin-bottom: 20px;color: #c2922d;}
+.box-ldg-4 .content ul{padding: 0;list-style: none;background: #c2922d;padding: 15px 50px;}
+.box-ldg-4 .content ul li{color: #FFF;font-size: 18px;font-family: "HelveLight";padding-bottom: 5px;}
+.box-ldg-5{width: 100%;height:auto;float:left;background:#e3d6a2 url('../images/landingpage-while-plus/bg-box-6.jpg') no-repeat;background-size: 100%;position: relative;top: -1px;padding: 120px 0 155px 0;}
+.box-ldg-5 .container{max-width: 980px;}
+.box-ldg-5 .content{width: 725px;height: auto;float: right;}
+.box-ldg-5 .content h2{color: #b72126;font-family: "HelveLight";margin-bottom: 35px;font-size: 40px;}
+.box-ldg-5 .content .item{font-family: "HelveLight";width: 100%;height: auto;float: left;border-bottom: #c2922d 1px dotted;padding: 20px 0;}
+.box-ldg-5 .content .item span{color: #a8760e;font-weight: bold;font-size: 20px;}
+.box-ldg-5 .content .item p{color: #583e19;font-size: 19px;margin: 0;margin-top: 10px;}
+.box-ldg-6{width: 100%;height:auto;float:left;background:#eee8d2 url('../images/landingpage-while-plus/bg-box-7.jpg') no-repeat;position: relative;top: -1px;background-size: 100%;padding-bottom: 345px;}
+.box-ldg-6 .container{max-width: 768px;}
+.box-ldg-6 .content{width: 100%;height: auto;float: left;padding-top: 200px;}
+.box-ldg-6 .content h3{color: #b72126;text-align: center;margin: 25px 0;}
+.box-ldg-6 .content p{color: #583e19;font-size: 20px;}
+.box-ldg-7{width: 100%;height:auto;float:left;background:url('../images/landingpage-while-plus/bg-box-8.png') no-repeat;padding: 50px 0 85px 0;position: relative;z-index: 1;background-size: 100% auto;top: -8px;}
+.box-ldg-7 .container{max-width: 768px}
+.box-ldg-7 h2{font-family: "HelveLight";text-transform: uppercase;text-align: right;color: #583e19;font-size: 35px;padding-right: 100px;}
+.box-ldg-7 h3{font-family: "HelveLight";text-transform: uppercase;text-align: right;color: #fcff00;font-size: 30px;line-height: 40px;margin-bottom: 20px;padding-right: 100px;}
+.box-ldg-7 .video{width: 550px;height:400px;margin: auto;}
+.box-ldg-7 .video .thumb{width: 100%;height:100%;float:left;position: relative}
+.box-ldg-7 .video .thumb img{width: 100%;height:100%;object-fit: cover;}
+.box-ldg-7 .video .thumb .icon-play{background: url(../images/icon-play.png) no-repeat;width: 65px;height: 65px;background-size: 65px !important;position: absolute;left: 0;right: 0;top: 0;bottom: 0;margin: auto;z-index: 2;}
+.box-ldg-8{width: 100%;height: auto;float: left;background: #e9eae8;font-family: "HelveLight";padding: 100px 0;position: relative;top: -8px;}
+.box-ldg-8 .container{max-width: 768px;}
+.box-ldg-8 h2{color: #6f8552;text-transform: uppercase;text-align: right;padding-right: 100px;margin-bottom: 15px;}
+.box-ldg-8 h3{color: #6f8552;text-transform: uppercase;text-align: right;padding-right: 100px;}
+.box-ldg-8 h4{color: #c2922d;text-transform: uppercase;text-align: right;padding-right: 100px;}
+.box-ldg-8 .list-customer{width: 100%;height: auto;float: left;margin-top: 80px;}
+.box-ldg-8 .list-customer .item{width: 100%;height: auto;float: left;margin-bottom: 30px;}
+.box-ldg-8 .list-customer .item .thumb{width: 50%;height: auto;float: left;padding-right: 20px;}
+.box-ldg-8 .list-customer .item .thumb img{width: 100%;height: auto;border: solid #FFF;}
+.box-ldg-8 .list-customer .item .info{width: 50%;height: auto;float: left;padding-left: 20px;}
+.box-ldg-8 .list-customer .item .info span{color: #c2922d;width: 100%;height: auto;float: left;text-transform: uppercase;font-weight: bold;font-size: 18px;}
+.box-ldg-8 .list-customer .item .info small{color: #6f8552;font-size: 14px;padding: 10px 0;width: 100%;height: auto;float: left;}
+.box-ldg-8 .list-customer .item .info p{color: #583e19;}
+.box-ldg-8 .list-customer .item-left .thumb{}
+.box-ldg-8 .list-customer .item-left .info{}
+.box-ldg-8 .list-customer .item-right .thumb{float: right;padding-left: 20px;padding-right: 0;}
+.box-ldg-8 .list-customer .item-right .info{padding-right: 20px;padding-left: 0;text-align: right;}
+.box-ldg-8 .list-screen-feedback{width: 100%;height:auto;float:left;margin-top: 30px}
+.box-ldg-8 .list-screen-feedback .row{margin-bottom: 20px}
+.box-ldg-8 .list-screen-feedback img{width: 100%;height:auto}
+footer{width: 100%;height:auto;float:left;background:#e9eae8 url('../images/landingpage-while-plus/bg-footer.png') no-repeat;background-position: center bottom;background-size: 100% auto;padding-top: 20px;padding-bottom: 220px;position: relative;top: -8px;}
+footer .container{max-width: 768px}
+footer .logo-sologan{width: 100%;height: auto;float: left;padding-bottom: 30px;}
+footer .logo-sologan p{}
+footer .logo-sologan img{height: 130px;width: auto;margin: auto;display: block;}
+footer .product{width: 100%;height: auto;float: left;}
+footer .product p{}
+footer .product p img{height: 400px;width: auto;margin: auto;display: block;}
+footer .product .price{}
+footer .product .price{width: 100%;height: auto;float: left;color: #5d8060;text-align: center;font-size: 24px;}
+.thumb-mobile{display: none;}
+@media(max-width:768px){
+    .thumb-mobile{display: block;opacity: 0;}
+    .thumb-mobile img{width: 100%;}
+    .box-ldg-1 .content{padding: 10px 0;}
+    .box-ldg-1 .content h3{font-size: 22px;padding-right: 0;}
+    .box-ldg-1 .content .list-item::before{width: 110%;height: 110%;top: -5%;left: -5%;}
+    .box-ldg-1 .content .list-item::after{width: 110%;height: 110%;left: -10%;}
+    .box-ldg-2 .container{max-width: 100%;padding: 0}
+    .box-ldg-2{padding: 0;}
+    .box-ldg-2 p img{position: absolute;top:15px;}
+    .box-ldg-2 h2{position: absolute;top: 100px;padding-right: 100px;}
+    .box-ldg-2 h3{position: absolute;top: 170px;padding-right: 130px;}
+    .box-ldg-2 ul.list-item{width: 100%;padding: 10px;margin-top: 0;padding-top: 0;}
+    .box-ldg-3 p img{width:100%;height: auto;}
+    .box-ldg-3::after{display: none}
+    .box-ldg-3 .price{position: relative;z-index: 999}
+    .readmore{position: relative;z-index: 9999}
+    .box-ldg-3 .list-feedback img{margin: auto;display: block}
+    .box-ldg-4{height: auto;position: relative;background-position: top center;}
+    .box-ldg-4 .container{max-width: 100%;}
+    .box-ldg-4 .content{position: relative;width: 100%;padding-top: 30px;}
+    .box-ldg-4 .content h2{text-align: center}
+    .box-ldg-5{padding: 20px 0;}
+    .box-ldg-5 .content{width: 100%;background: rgba(255,255,255,0.5);padding: 10px;}
+    .box-ldg-5 .content h2{text-align: center;}
+    .box-ldg-6{padding-bottom: 0;}
+    .box-ldg-6 .container{width: 100%;}
+    .box-ldg-6 .content h3{position: absolute;top: 45px;padding: 0 60px;}
+    .box-ldg-6 .content p{margin-top: 80px;}
+    .box-ldg-7{background-size: cover}
+    .box-ldg-7 h2{padding-right: 0}
+    .box-ldg-7 h3{padding-right: 0}
+    .box-ldg-7 .video{width: 100%;height:auto}
+    .box-ldg-8{padding: 20px 0}
+    .box-ldg-8 h2{padding-right: 0}
+    .box-ldg-8 h3{padding-right: 0}
+    .box-ldg-8 h4{padding-right: 0}
+    .box-ldg-8 .list-customer .item-left .info{padding-left: 0}
+    .box-ldg-8 .list-customer .item .info p{width: calc(100% + 100%);height: auto;float: left;position: relative;left: -100%;top: 60px;}
+    .box-ldg-8 .list-customer .item{margin-bottom: 60px}
+    .box-ldg-8 .list-customer .item-right .info p{left: 0;text-align: left;}
+    footer .logo-sologan img{width: 100%;}
+    footer .product p img{width: 100%;}
+}
